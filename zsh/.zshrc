@@ -41,5 +41,14 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git ruby)
 
+function mkdcd {
+    local IFS=" "
+    mkdir -p "$*"
+    cd "$*"
+}
+
+export PATH=$PATH:~/bin
+
 mesg n
+
 source $ZSH/oh-my-zsh.sh
