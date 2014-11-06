@@ -47,6 +47,12 @@ function mkdcd {
     cd "$*"
 }
 
+function autotex {
+    while inotifywait $1;
+    do sleep .5; pdflatex -halt-on-error $1 < /dev/null
+    done
+}
+
 export PATH=$PATH:~/bin
 
 mesg n
