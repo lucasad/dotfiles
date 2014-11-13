@@ -1,5 +1,6 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 syntax on
-set background=dark sw=4 ts=4 et spell
+set sw=4 ts=4 et spell
+let g:solarized_termtrans=1
 colorscheme solarized
